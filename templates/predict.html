@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Solar Iradiance Forecasting</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+<link rel="stylesheet" type="text/css" href="css/predict.css">
+</head>
+<body>
+<div id="main">	
+	<div id="p_form">
+<h2><b>Predictor Details</b></h2>
+<fieldset>
+	<h1>Please provide the following details ahead of the prediction</h1>
+	<legend>Prediction Form</legend>
+	<form action="predict.php" method="POST">
+		<label for="dayval">Day Value:</label>
+		<input type="text" name="day" placeholder="Enter the day value" required=""><br /><br />
+		<label for="hval">Hour Value:</label>
+		<input type="text" name="hour" placeholder="Enter the hour value" required=""><br /><br />
+		<label for="minval">Minute Value:</label>
+		<input type="text" name="minute" placeholder="Enter the minute value" required=""><br /><br />
+		<label for="dni">DNI Value:</label>
+		<input type="text" name="dni" placeholder="Enter the DNI value" required=""><br/><br />
+		<label for="dhi">DHI Value:</label>
+		<input type="text" name="dhi" placeholder="Enter the DHI value"><br><br>
+			<label for="cloud">Cloud Type:</label>
+			<input type="text" name="cloud_type" placeholder="Enter the cloud type"><br><br>
+			<label for"wind">Wind Speed:</label>
+			<input type="text" name="wind_speed" placeholder="Enter the wind speed"><br><br>
+			<label for="pressure">Pressure:</label>
+			<input type="text" name="pressure" placeholder="Enter the atmospheric pressure value"><br><br>
+			<label for="temp">Temperature Value:</label>
+			<input type="text" name="temp" placeholder="Enter the temperature value"><br><br>
+			<label for="hum">Humidity Value:</label>
+			<input type="text" name="humidity" placeholder="Enter humidity value"><br><br>
+			<input type="submit" name="predict" value="Predict">
+	</form>
+</fieldset>
+</div>
+<div class="result" align="center">
+    		<!-- {% if result %}
+        	 -->	<!-- {% for variable, value in original_input.items() %}
+            		<b>{{ variable }}</b> : {{ value }}
+        			{% endfor %}
+        			<br> -->
+        			<br> <h2>Predicted Irradiance Value:</h2>
+           			<p style="font-size:50px">{{ result }}</p>
+    		<!-- {% endif %} -->
+		</div>
+	</div>
+</body>
+</html>

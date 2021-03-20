@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<title>Solar Iradiance Forecasting</title>
+	<style type="text/css">
+		body{
+			background:#FFAC33;
+			margin: 10px;
+			padding: 40px;
+			border-color: blue;
+			border-width: 2px;
+			}
+	</style>
+	</head>
+	<body>
+		<form action="{{ url_for('main') }}", method="POST">
+			<label>Day Value:</label>
+			<input type="text" name="day"><br>
+			<label for>Hour Value:</label>
+			<input type="text" name="hour"><br>
+			<label for>Minute Value:</label>
+			<input type="text" name="minute"><br>
+			<label>DNI Value:</label>
+			<input type="text" name="dni"><br>
+			<label>DHI Value:</label>
+			<input type="text" name="dhi"><br>
+			<label>Cloud Type:</label>
+			<input type="text" name="cloud_type"><br>
+			<label>Wind Speed:</label>
+			<input type="text" name="wind_speed"><br>
+			<label>Pressure:</label>
+			<input type="text" name="pressure"><br>
+			<label>Temperature Value:</label>
+			<input type="text" name="temp"><br>
+			<label>Humidity Value:</label>
+			<input type="text" name="humidity"><br>
+			<input type="button" name="predict" value="Predict">
+		</form>
+
+		<div class="result" align="center">
+    		
+        			<br> Predicted Irradiance Value:
+           			<p style="font-size:50px">{{ prediction }}</p>
+    		<!-- {% endif %} -->
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,52 @@
+body{
+	background: white;
+	margin: 10px;
+	padding: 0px;
+}
+
+/* Style for the labels 
+The style appplies to all labels in the form
+*/
+
+label{
+font-family: Tahoma, Gneva, Sans-serif;
+float: left;
+width: 200px;
+}
+input{
+	padding: 6px;
+	margin: 1px;
+	border: 2px;
+}
+
+input[type=text], input[type=email], input[type=number], input[type=password]{
+	width: 50%;
+	border-color: black;
+}
+
+input [type=button]{
+	width: 100%;
+	background: grey;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: bold;
+	color: white;
+	border: 2px;
+}
+
+fieldset{
+	font-size: 16px;
+	color: black;
+	background: lightblue;
+	border-radius: 10px;
+	border: 2px solid red;
+}
+legend{
+	color: blue;
+}
+
+h2{
+	text-align: center;
+	color: red;
+}
